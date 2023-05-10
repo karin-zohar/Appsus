@@ -1,7 +1,7 @@
 /* Setup */
 
 @import './setup/variables.css';
-/* @import './setup/fonts.css'; */
+@import './setup/typography.css';
 
 /* Basics */
 
@@ -12,9 +12,9 @@
 /* Views */
 @import './views/home.css';
 
-/* @import './apps/note/views/note-index.css'; */
+@import './apps/note/views/note-index.css';
 
-/* @import './apps/mail/views/mail-index.css'; */
+@import './apps/mail/views/mail-index.css';
 
 /* Cmps */
 
