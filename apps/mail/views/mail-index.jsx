@@ -1,5 +1,15 @@
+import { mailService } from '../../../services/mail-service.js'
+
+const {useEffect } = React
 
 export function MailIndex() {
-    return <div>mail app</div>
+    mailService.printAll()
+
+
+    return (
+        <div>
+            
+        </div>
+    )
 }
 
