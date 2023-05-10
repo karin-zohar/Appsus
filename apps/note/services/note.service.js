@@ -14,6 +14,21 @@ const gNotes = [
         }
     },
     {
+        id: 'krr3wT',
+        type: 'NoteTodos',
+        isPinned: false,
+        info: {
+            title: 'Not to forget!!!',
+            todos: [
+                { txt: 'Short todo', doneAt: 187441111 },
+                { txt: 'Coding power a lot...', doneAt: 187111111 },
+                { txt: 'Driving license', doneAt: null },
+                { txt: 'Get this and that now', doneAt: 182563110 },
+                { txt: 'Another tododododod', doneAt: 187111555 },
+            ]
+        }
+    },
+    {
         id: '2bzwT5',
         createdAt: 1112222,
         type: 'NoteTxt',
@@ -36,7 +51,7 @@ const gNotes = [
         },
         info: {
             title: 'New Note2',
-            txt: 'sadf asdfFu asdl lst ack Me Baby asd!'
+            txt: 'sadf asdfFu asdl lst ac`dvfk Me Baby asdgf asdgf asdg asdgasdfga afg asdfg sdfg sdfg sdfg sdfg sdfg asdfg asd!'
         }
     },
     {
@@ -65,6 +80,18 @@ const gNotes = [
             txt: 'asdf ck Ma sdf asdfe Baby!'
         }
     },
+    {
+        id: '34U3wQ',
+        type: 'NoteImg',
+        isPinned: false,
+        info: {
+            url: 'honda',
+            title: 'Bobi and Me'
+        },
+        style: {
+            backgroundColor: '#00d'
+        }
+    },
     // {
     // id: '34Udn2Q',
     // type: 'NoteImg',
@@ -77,18 +104,34 @@ const gNotes = [
     // backgroundColor: '#00d'
     // }
     // },
-    // {
-    // id: 'k423nT',
-    // type: 'NoteTodos',
-    // isPinned: false,
-    // info: {
-    // title: 'Get my stuff together',
-    // todos: [
-    // { txt: 'Driving license', doneAt: null },
-    // { txt: 'Coding power', doneAt: 187111111 }
-    // ]
-    // }
-    // }
+   
+    {
+        id: 'k423nT',
+        type: 'NoteTodos',
+        isPinned: false,
+        info: {
+            title: 'Get my stuff together',
+            todos: [
+                { txt: 'Driving license', doneAt: null },
+                { txt: 'Coding power a lot...', doneAt: 187111111 },
+                { txt: 'Short todo', doneAt: 187441111 },
+                { txt: 'Another tododododod', doneAt: 187111555 },
+                { txt: 'Get this and that now', doneAt: 182563110 }
+            ]
+        }
+    },
+    {
+        id: '22g3wQ',
+        type: 'NoteImg',
+        isPinned: false,
+        info: {
+            url: 'fiat',
+            title: 'Joni and Me'
+        },
+        style: {
+            backgroundColor: '#00d'
+        }
+    }
 ]
 
 import { utilService } from "../../../services/util.service.js"

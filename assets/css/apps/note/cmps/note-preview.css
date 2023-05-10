@@ -1,0 +1,66 @@
+.note-container {
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1;
+align-items: flex-start; */
+    margin: .5em;
+}
+
+.todo-item h2 {
+    order: 1;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    order: 2;
+}
+
+.todo-item:nth-child(1) {
+    margin-right: auto;
+}
+
+.todo-item h3 {
+ margin-left: .5em;
+ margin-right: auto;
+}
+
+.todo-item:nth-child(3) {
+    margin-left: auto;
+}
+
+.note-toolbar {
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+margin-top: .5em;
+opacity: 0;
+transition: .5s;
+}
+
+.pin-note {
+    position: absolute;
+    top: 0;
+    right: .2em;
+}
+
+.pin-note::before {
+    content: '\f10d';
+}
+
+.trash::before {
+    content: '\e872';
+}
+
+.color::before {
+    content: '\e40a';
+}
+
+.image::before {
+    content: '\e3f4';
+}
+
+.label::before {
+    content: '\e892';
+}
+
