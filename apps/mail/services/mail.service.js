@@ -7,10 +7,15 @@ const loggedinUser = {
     fullname: 'Alex Stone'
 }
 
-const demoUser = {
+const demoUsers = [{
     email: 'alissa@appsus.com',
     fullname: 'Alissa Smith'
-}
+},
+{
+    email: 'ellen@netflix.com',
+    fullname: 'Netflix'
+},
+]
 
 const labels = ['critical', 'family', 'work', 'friends', 'spam', 'memories', 'romantic']
 
@@ -101,7 +106,17 @@ function _createMails() {
     let mails = utilService.loadFromStorage(MAIL_KEY)
     if (!mails || !mails.length) {
         mails = []
-        mails.push(_createMail('hi Alex!', 'I am writing to tell you about something interesting that happened today...', demoUser, loggedinUser, ['friends', 'memories']))
+        mails.push(_createMail('hi Alex!',
+         'I am writing to tell you about something interesting that happened today. You are not going to believe it!', demoUsers[0], loggedinUser, ['friends', 'memories']))
+        mails.push(_createMail('Good news!', `I hope you've been doing well! can we meet up soon? I have somehtingto tell you`, demoUsers[0], loggedinUser, ['work']))
+        mails.push(_createMail(`Don't miss out on our exclusive offer!`, `Hey there,
+
+        We wanted to remind you that our exclusive offer is ending soon. This is your last chance to take advantage of our special discount and get 20% off your next purchase. Don't miss out!
+        
+        Visit our website and use the promo code SAVE20 at checkout to claim your discount. We hope to see you soon!
+        
+        Best,
+        The Sales Team`, demoUsers[1], loggedinUser, ['spam']))
         utilService.saveToStorage(MAIL_KEY, mails)
     }
     console.log('mails: ', mails)
@@ -112,6 +127,7 @@ function _createMail(subject, body, sender, receiver, labels = []) {
     const mail = getEmptyMail(subject, body, sender, receiver)
     mail.id = utilService.makeId()
     mail.labels = labels
+    mail.sentAt = '9 May'
     return mail
 }
 

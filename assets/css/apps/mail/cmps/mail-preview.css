@@ -1,0 +1,9 @@
+.mail-body-preview {
+    color: #5f6368;
+}
+
+.short-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
