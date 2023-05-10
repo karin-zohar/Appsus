@@ -1,1 +1,27 @@
  /* note index */
+
+ .note-list {
+    column-count: auto;
+    column-width: 300px;
+    column-gap: 0px;
+    margin-inline: 1rem;
+ }
+
+ .note-preview {
+    display: grid;
+    place-content: center;
+    /* grid-template-columns: 30px, 80px; */
+    /* grid-template-columns: min-content minmax(10rem, 15rem); */
+    grid-auto-flow: row;
+    break-inside: avoid;
+    padding: 10px;
+    margin-inline: 10px;
+    margin-block: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: bisque;
+}
+
+ .note-preview:first-of-type {
+    margin-block-start: 0;
+}

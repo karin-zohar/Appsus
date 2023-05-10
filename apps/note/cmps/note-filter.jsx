@@ -23,7 +23,7 @@ export function NoteFilter({filterBy, onSetFilter}) {
     return (
         <section>
             <form onSubmit={onSubmitFilter}>
-                <button>🔍</button>
+                <span className="material-symbols-outlined magnifier"></span>
                 <input value={type} onChange={handleChange}type="text" placeholder="Search" />
                 <button>X</button>
             </form>

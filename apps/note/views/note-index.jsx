@@ -2,6 +2,7 @@ const { useState, useEffect} = React
 const { Link, useSearchParams  } = ReactRouterDOM
 
 import { NoteFilter } from "../cmps/note-filter.jsx"
+import { NoteList } from "../cmps/note-list.jsx"
 import { noteService} from "../services/note.service.js"
 
 export function NoteIndex() {
@@ -29,6 +30,7 @@ export function NoteIndex() {
     return (
        <section>
         <NoteFilter onSetFilter={onSetFilter} filterBy={filterBy}/>
+        <NoteList notes={notes}/>
        </section>
     )
 }

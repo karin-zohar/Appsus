@@ -21,3 +21,15 @@
 .grid {
     display: grid;
 }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.magnifier::before{
+    content: '\e8b6';
+}
