@@ -9,7 +9,7 @@ import { MailFilter } from '../cmps/mail-filter.jsx'
 export function MailIndex() {
     const [searchParams, setSearchParams] = useSearchParams()
     const [filterBy, setFilterBy] = useState({txt: ''})
-    const [mails, setMailss] = useState([])
+    const [mails, setMails] = useState([])
 
     useEffect(() => {
         loadMails()
@@ -17,8 +17,8 @@ export function MailIndex() {
     }, [filterBy])
 
     function loadMails() {
-        mailService.query(filterBy).then(mails => setMails(mails))
-        
+        mailService.query(filterBy)
+        .then(mails => setMails(mails))
     }
 
     function onSetFilter(filterBy) {
@@ -28,8 +28,8 @@ export function MailIndex() {
 
     return (
        <section className="mail-index">
-        {/* <MailFilter /> */}
-        <MailList onSetFilter={onSetFilter} filterBy={filterBy}/>
+        <MailFilter onSetFilter={onSetFilter} filterBy={filterBy} />
+        <MailList mails={mails}/>
        </section>
     )
 }

@@ -1,9 +1,23 @@
+const { Fragment } = React
+export function MailPreview({ mail }) {
 
-export function MailPreview() {
+    const bodyPreview = mail.body.substring(0, 150)
 
     return (
-        <section className="mail-preview">
-            <h1>hello</h1>
-        </section>
+        <Fragment>
+            <td>{mail.sender.email}</td>
+            <td>
+                <span className="short-text">
+                    {mail.subject}
+                </span>
+            </td>
+            <td className='mail-body-preview' >
+                <span className="short-text">
+                    {bodyPreview}
+                </span>
+            </td>
+            <td>{mail.sentAt}</td>
+        </Fragment>
+
     )
 }
