@@ -20,7 +20,6 @@ const demoUsers = [{
 
 const labels = ['critical', 'family', 'work', 'friends', 'spam', 'memories', 'romantic']
 
-console.log('hello mail service')
 _createMails()
 
 export const mailService = {
@@ -30,7 +29,8 @@ export const mailService = {
     save,
     getEmptyMail,
     getDefaultFilter,
-    updateMailProperty
+    updateMailProperty,
+    addMail
 }
 
 function query(filterBy = {}) {
@@ -55,12 +55,10 @@ function save(mail) {
     }
 }
 
-
-
 function filterMails(mails, filterBy) {
     if (filterBy.txt) {
         const regExp = new RegExp(filterBy.txt, 'i')
-        mails = mails.filter(mail => 
+        mails = mails.filter(mail =>
             regExp.test(mail.subject) ||
             regExp.test(mail.body) ||
             regExp.test(mail.sender))
@@ -74,9 +72,7 @@ function filterMails(mails, filterBy) {
         mails = mails.filter(mail => mail.isStarred === filter.isStarred)
     }
 
-
     return mails
-
 }
 
 function updateMailProperty(mailId, field, newValue) {
@@ -89,6 +85,17 @@ function updateMailProperty(mailId, field, newValue) {
     // save(mail)
     console.log('update mail property')
 }
+
+function addMail(mail) {
+    mail.sentAt = new Date
+    console.log('mail.sentAt: ', mail.sentAt)
+    mail.state = 'sent'
+    mail.sender = loggedinUser
+    console.log('mail: ', mail)
+    console.log('mail.id: ', mail.id)
+    save(mail)
+}
+
 
 function getEmptyMail(subject = '', body = '', sender = '', receiver = '') {
     return {
@@ -119,7 +126,7 @@ function _createMails() {
     if (!mails || !mails.length) {
         mails = []
         mails.push(_createMail('hi Alex!',
-         'I am writing to tell you about something interesting that happened today. You are not going to believe it!', demoUsers[0], loggedinUser, ['friends', 'memories']))
+            'I am writing to tell you about something interesting that happened today. You are not going to believe it!', demoUsers[0], loggedinUser, ['friends', 'memories']))
         mails.push(_createMail('Good news!', `I hope you've been doing well! can we meet up soon? I have somehtingto tell you`, demoUsers[0], loggedinUser, ['work']))
         mails.push(_createMail(`Don't miss out on our exclusive offer!`, `Hey there,
 
@@ -131,15 +138,13 @@ function _createMails() {
         The Sales Team`, demoUsers[1], loggedinUser, ['spam']))
         utilService.saveToStorage(MAIL_KEY, mails)
     }
-    console.log('mails: ', mails)
-
 }
 
 function _createMail(subject, body, sender, receiver, labels = []) {
     const mail = getEmptyMail(subject, body, sender, receiver)
     mail.id = utilService.makeId()
     mail.labels = labels
-    mail.sentAt = '9 May'
+    mail.sentAt = new Date
     return mail
 }
 

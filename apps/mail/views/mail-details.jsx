@@ -1,6 +1,7 @@
 const { useEffect, useState } = React
 const { useParams, useNavigate, Link } = ReactRouterDOM
 
+import { utilService} from "../../../services/util.service.js"
 import { mailService } from "../services/mail.service.js"
 import { MailStar } from "../cmps/mail-star.jsx"
 
@@ -8,22 +9,27 @@ export function MailDetails() {
     const [mail, setMail] = useState(null)
     const { mailId } = useParams()
     const navigate = useNavigate()
-    console.log('hello mail details')
-
+    
+    
+    
     useEffect(() => {
         loadMail()
     }, [mailId])
-
+    
+    
     function loadMail() {
         mailService.get(mailId)
-            .then(setMail)
-            .catch(err => {
-                console.log('Had issued in mail details:', err);
-                navigate('/mail')
-            })
+        .then(setMail)
+        .catch(err => {
+            console.log('Had issued in mail details:', err);
+            navigate('/mail')
+        })
     }
-
+    
     if (!mail) return (<h1>loading...</h1>)
+    console.log('mail.sentAt: ', mail.sentAt)
+    // const time = utilService.getTimeString(mail.sentAt)
+    // const time = 'hi'
     return (
         <section className="mail-details">
             <h2>{mail.subject}</h2>
