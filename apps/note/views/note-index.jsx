@@ -28,7 +28,7 @@ export function NoteIndex() {
     }
 
     return (
-       <section>
+       <section className="note-app">
         <NoteFilter onSetFilter={onSetFilter} filterBy={filterBy}/>
         <NoteList notes={notes}/>
        </section>

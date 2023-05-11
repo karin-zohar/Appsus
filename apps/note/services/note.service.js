@@ -6,25 +6,28 @@ const gNotes = [
         type: 'NoteTxt',
         isPinned: false,
         style: {
-            backgroundColor: '#00d'
+            backgroundColor: '#B2C8DF'
         },
         info: {
-            title: 'Bobi and Me',
-            txt: 'Fullstack Me Baby!'
+            title: 'Fullstack Me Baby!',
+            txt: 'Fullstack Me Baby! Fullstack Me Baby! Fullstack Me Baby! Fullstack Me Baby! Fullstack Me Baby!'
         }
     },
     {
         id: 'krr3wT',
         type: 'NoteTodos',
         isPinned: false,
+        style: {
+            backgroundColor: '#FFB3B3'
+        },
         info: {
             title: 'Not to forget!!!',
             todos: [
-                { txt: 'Short todo', doneAt: 187441111 },
-                { txt: 'Coding power a lot...', doneAt: 187111111 },
-                { txt: 'Driving license', doneAt: null },
-                { txt: 'Get this and that now', doneAt: 182563110 },
-                { txt: 'Another tododododod', doneAt: 187111555 },
+                { id: 'hid25g',txt: 'Short todo', doneAt: 187441111 },
+                { id: 'h4d2n4',txt: 'Coding power a lot...', doneAt: 187111111 },
+                { id: '11d2n4',txt: 'Driving license', doneAt: null },
+                { id: 'hi3wn4',txt: 'Get this and that now', doneAt: 182563110 },
+                { id: 'hid2n4',txt: 'Another tododododod', doneAt: 187111555 },
             ]
         }
     },
@@ -34,7 +37,7 @@ const gNotes = [
         type: 'NoteTxt',
         isPinned: false,
         style: {
-            backgroundColor: '#00d'
+            backgroundColor: '#FFDBA4'
         },
         info: {
             title: 'New Note1',
@@ -47,7 +50,7 @@ const gNotes = [
         type: 'NoteTxt',
         isPinned: false,
         style: {
-            backgroundColor: '#00d'
+            backgroundColor: '#F2D388'
         },
         info: {
             title: 'New Note2',
@@ -60,7 +63,7 @@ const gNotes = [
         type: 'NoteTxt',
         isPinned: false,
         style: {
-            backgroundColor: '#00d'
+            backgroundColor: '#AF7AB3'
         },
         info: {
             title: 'New Note3',
@@ -73,7 +76,7 @@ const gNotes = [
         type: 'NoteTxt',
         isPinned: false,
         style: {
-            backgroundColor: '#00d'
+            backgroundColor: '#C2DED1'
         },
         info: {
             title: 'New Note4',
@@ -85,38 +88,40 @@ const gNotes = [
         type: 'NoteImg',
         isPinned: false,
         info: {
-            url: 'honda',
-            title: 'Bobi and Me'
+            url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXLBoiwVkhYPD_hrDfLt_hOkfdxIFM2lAhtA&usqp=CAU',
+            title: 'Memories'
         },
         style: {
-            backgroundColor: '#00d'
+            backgroundColor: '#CDF0EA'
         }
     },
-    // {
-    // id: '34Udn2Q',
-    // type: 'NoteImg',
-    // isPinned: false,
-    // info: {
-    // url: 'http://some-img/me',
-    // title: 'Bobi and Me'
-    // },
-    // style: {
-    // backgroundColor: '#00d'
-    // }
-    // },
-   
+    {
+    id: '34Udn2Q',
+    type: 'NoteImg',
+    isPinned: false,
+    info: {
+    url: 'https://paradepets.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkxMzY1Nzg4NjczMzIwNTQ2/cutest-dog-breeds-jpg.jpg',
+    title: 'New Born'
+    },
+    style: {
+    backgroundColor: '#9AD0EC'
+    }
+    },
     {
         id: 'k423nT',
         type: 'NoteTodos',
         isPinned: false,
+        style: {
+            backgroundColor: '#EB6383'
+        },
         info: {
             title: 'Get my stuff together',
             todos: [
-                { txt: 'Driving license', doneAt: null },
-                { txt: 'Coding power a lot...', doneAt: 187111111 },
-                { txt: 'Short todo', doneAt: 187441111 },
-                { txt: 'Another tododododod', doneAt: 187111555 },
-                { txt: 'Get this and that now', doneAt: 182563110 }
+                { id: 'hihh5g', txt: 'Driving license', doneAt: null },
+                { id: 'hg525g', txt: 'Coding power a lot...', doneAt: 187111111 },
+                { id: '44d25g', txt: 'Short todo', doneAt: 187441111 },
+                { id: 'j865vr', txt: 'Another tododododod', doneAt: 187111555 },
+                { id: '32sreQ', txt: 'Get this and that now', doneAt: 182563110 }
             ]
         }
     },
@@ -125,11 +130,11 @@ const gNotes = [
         type: 'NoteImg',
         isPinned: false,
         info: {
-            url: 'fiat',
+            url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToy_IKw-gmdmTfNu_DqwxO6DaHOE7kvyFLtg&usqp=CAU',
             title: 'Joni and Me'
         },
         style: {
-            backgroundColor: '#00d'
+            backgroundColor: '#F3D1F4'
         }
     }
 ]

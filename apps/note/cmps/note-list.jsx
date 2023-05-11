@@ -8,8 +8,8 @@ export function NoteList({ notes, onRemoveNote }) {
     return (
         <section className="note-list">
             <ul>
-                {notes.map(note =>
-                    <li key={note.id}>
+                {notes.map(note => 
+                    <li key={note.id} >
                         <NotePreview note={note} />
                     </li>
                 )}
@@ -17,3 +17,4 @@ export function NoteList({ notes, onRemoveNote }) {
         </section>
     )
 }
+
