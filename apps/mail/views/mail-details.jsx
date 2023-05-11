@@ -39,7 +39,7 @@ export function MailDetails() {
                             <td>{mail.sender.email}</td>
                             <td>{mail.sentAt}</td>
                             <td><MailStar mail={mail}/></td>
-                            <td><div className="reply material-symbols-outlined"></div></td>
+                            <td><div className="reply material-symbols-outlined icon-bg"></div></td>
                             
                         </tr>
                     </tbody>

@@ -18,7 +18,7 @@ export function MailStar({ mail }) {
         setIsStarred(prevIsStarred => !prevIsStarred)
     }
 
-    const starClass = isStarred ? 'star starred' : 'star'
+    const starClass = isStarred ? ' icon-bg star starred' : ' icon-bg star'
 
     return (
         <div className={starClass} onClick={() => onStar()}></div>
