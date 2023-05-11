@@ -1,15 +1,61 @@
 
+.mail-compose {
+    height: 600px;
+    width: 450px;
+    padding: 1em;
+}
+
+.mail-compose form {
+    display: grid;
+    grid-template-rows:  1fr 1fr 5.5fr 1.5fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "to to"
+    "subject subject"
+    "comp-body comp-body"
+    "send delete"
+    ;
+}
+
+.mail-compose input {
+    border: none;
+    width: 70%;
+}
+
+.compose-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.compose-to {
+    grid-area: to;
+}
+
+.compose-subject {
+    grid-area: subject;
+}
+
+.close-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
 .close-btn::before {
     content: '\e5cd';
     color: #202124;
 }
 
-.mail-compose textarea {
+.mail-body {
+    grid-area: comp-body;
+    background-color: aqua;
     border: none;
+    resize: none;
 }
 
-.test {
-    background-color: aqua;
-    width: 200px;
-    height: 200px;
+.send-btn {
+    grid-area: send;
+}
+
+.delete-btn {
+    grid-area: delete;
 }

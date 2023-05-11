@@ -3,7 +3,7 @@ export function MailCompose() {
 
     return (
         <section className="mail-compose">
-            <section>
+            <section className="compose-title">
                 <h2>New Message</h2>
                 <div>
                     <button className="close-btn material-symbols-outlined"></button>
@@ -11,21 +11,23 @@ export function MailCompose() {
             </section>
             <section>
                 <form >
-                    <article>
-                    <label htmlFor="to">To:</label>
-                    <input type="text" name="to" id="to"/>
-                    </article>
-                    
-                    <article>
-                    <label htmlFor="subject">Subject:</label>
-                    <input type="text" name="subject" id="subject"/>
+                    <article className="compose-to">
+                        <label htmlFor="to">To:</label>
+                        <input type="text" name="to" id="to" />
                     </article>
 
-                    {/* <article className="test" contentEditable="true" name="mail-body"></article> */}
-                    {/* <textarea name="mail-body" id="mail-body" cols="30" rows="10"></textarea> */}
+                    <article className="compose-subject">
+                        <label htmlFor="subject">Subject:</label>
+                        <input type="text" name="subject" id="subject" />
+                    </article>
 
-                </form>
-            </section>
+                    <textarea className="mail-body" name="mail-body"></textarea>
+
+                    <button className="send-btn">Send</button>
+                    <button className="delete-btn">Delete</button>
+
+            </form>
         </section>
+        </section >
     )
 }
