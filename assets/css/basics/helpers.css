@@ -33,3 +33,18 @@
 .magnifier::before {
     content: '\e8b6';
 }
+
+.icon-bg {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.icon-bg.transparent:hover {
+    background-color: #f2f2f28c;
+}
+
+.icon-bg:hover {
+    background-color: #f2f2f2;
+}

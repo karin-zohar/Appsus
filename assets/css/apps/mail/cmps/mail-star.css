@@ -1,13 +1,5 @@
 .star {
-    height: 2em;
-    width: 2em;
-    border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.star:hover {
-    background-color: #f2f2f2;
 }
 
 .star::before {
