@@ -1,0 +1,6 @@
+.reply::before {
+    content: '\e15e';
+    color: gray;
+    cursor: pointer;
+    
+}

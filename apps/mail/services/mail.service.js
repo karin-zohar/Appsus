@@ -1,5 +1,6 @@
 import { utilService } from '../../../services/util.service.js'
 import { storageService } from '../../../services/async-storage.service.js'
+import { MailList } from '../cmps/mail-list.jsx'
 
 const MAIL_KEY = 'mailDB'
 const loggedinUser = {
@@ -28,7 +29,8 @@ export const mailService = {
     remove,
     save,
     getEmptyMail,
-    getDefaultFilter
+    getDefaultFilter,
+    updateMailProperty
 }
 
 function query(filterBy = {}) {
@@ -77,6 +79,16 @@ function filterMails(mails, filterBy) {
 
 }
 
+function updateMailProperty(mailId, field, newValue) {
+    // console.log('mailId: ', mailId)
+    // console.log('field: ', field)
+    // console.log('newValue: ', newValue)
+    // const mail = get(mailId)
+    // console.log('mail: ', mail)
+    // mail[field] = newValue
+    // save(mail)
+    console.log('update mail property')
+}
 
 function getEmptyMail(subject = '', body = '', sender = '', receiver = '') {
     return {

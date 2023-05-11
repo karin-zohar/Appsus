@@ -1,0 +1,25 @@
+.star {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.star:hover {
+    background-color: #f2f2f2;
+}
+
+.star::before {
+    position: absolute;
+    content: '\2606';
+    font-size: 1.5em;
+    transform: translate(28%,-8%);
+    color: gray;
+}
+
+.starred.star::before {
+    content: '\2605';
+    font-size: 1.5em;
+    color: #f8d165;
+}
