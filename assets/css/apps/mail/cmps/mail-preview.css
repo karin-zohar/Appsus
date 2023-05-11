@@ -2,8 +2,11 @@
     color: #5f6368;
 }
 
-.short-text {
-    overflow: hidden;
+.short-text, .mail-body-preview {
+    overflow-x: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    /* max-width: 600px; */
+    /* width: 100%; */
 }
+

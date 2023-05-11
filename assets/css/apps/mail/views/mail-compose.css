@@ -1,0 +1,15 @@
+
+.close-btn::before {
+    content: '\e5cd';
+    color: #202124;
+}
+
+.mail-compose textarea {
+    border: none;
+}
+
+.test {
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+}

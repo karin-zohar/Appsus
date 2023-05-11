@@ -1,5 +1,5 @@
 const {useEffect , useState } = React
-const { Link, useSearchParams } = ReactRouterDOM
+const { Link, useSearchParams, Outlet, NavLink  } = ReactRouterDOM
 
 import { mailService } from '../../mail/services/mail.service.js'
 import { MailList } from '../cmps/mail-list.jsx'
@@ -30,6 +30,8 @@ export function MailIndex() {
        <section className="mail-index">
         <MailFilter onSetFilter={onSetFilter} filterBy={filterBy} />
         <MailList mails={mails}/>
+        <NavLink to="/mail/compose" >Compose</NavLink>
+        <Outlet />
        </section>
     )
 }
