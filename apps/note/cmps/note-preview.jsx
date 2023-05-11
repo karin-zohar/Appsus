@@ -4,7 +4,6 @@ import { utilService } from "../../../services/util.service.js"
 
 export function NotePreview({ note }) {
     const [cmpType, setCmpType] = useState()
-    const noteBgC = {backgroundColor: `${note.style.backgroundColor}`, }
     function DynamicCmp(props) {
         switch (props.cmpType) {
             case 'NoteTxt':
@@ -73,15 +72,8 @@ export function NotePreview({ note }) {
     }
 
     return (
-        <article style={noteBgC} className="note-preview" >
-            <span className="note-toolbar material-symbols-outlined pin-note"></span>
+        <article>
             <DynamicCmp cmpType={note.type} note={note} />
-            <div className="note-toolbar">
-                <span className="material-symbols-outlined trash"></span>
-                <span className="material-symbols-outlined color"></span>
-                <span className="material-symbols-outlined image"></span>
-                <span className="material-symbols-outlined label"></span>
-            </div>
         </article>
     )
 }

@@ -1,3 +1,12 @@
+// #fdcfe880
+// #d7aefb80
+// #aecbfa80
+// #a7ffeb80
+// #cbf0f880
+// #ccff9080
+// #fff47580
+// #FDBC1C80
+// #f28b8280
 const NOTE_KEY = 'noteDB'
 const gNotes = [
     {
@@ -6,7 +15,7 @@ const gNotes = [
         type: 'NoteTxt',
         isPinned: false,
         style: {
-            backgroundColor: '#B2C8DF'
+            backgroundColor: '#f28b8280'
         },
         info: {
             title: 'Fullstack Me Baby!',
@@ -18,7 +27,7 @@ const gNotes = [
         type: 'NoteTodos',
         isPinned: false,
         style: {
-            backgroundColor: '#FFB3B3'
+            backgroundColor: '#FDBC1C80'
         },
         info: {
             title: 'Not to forget!!!',
@@ -37,7 +46,7 @@ const gNotes = [
         type: 'NoteTxt',
         isPinned: false,
         style: {
-            backgroundColor: '#FFDBA4'
+            backgroundColor: '#fff47580'
         },
         info: {
             title: 'New Note1',
@@ -50,7 +59,7 @@ const gNotes = [
         type: 'NoteTxt',
         isPinned: false,
         style: {
-            backgroundColor: '#F2D388'
+            backgroundColor: '#ccff9080'
         },
         info: {
             title: 'New Note2',
@@ -63,7 +72,7 @@ const gNotes = [
         type: 'NoteTxt',
         isPinned: false,
         style: {
-            backgroundColor: '#AF7AB3'
+            backgroundColor: '#cbf0f880'
         },
         info: {
             title: 'New Note3',
@@ -76,7 +85,7 @@ const gNotes = [
         type: 'NoteTxt',
         isPinned: false,
         style: {
-            backgroundColor: '#C2DED1'
+            backgroundColor: '#a7ffeb80'
         },
         info: {
             title: 'New Note4',
@@ -92,7 +101,7 @@ const gNotes = [
             title: 'Memories'
         },
         style: {
-            backgroundColor: '#CDF0EA'
+            backgroundColor: '#aecbfa80'
         }
     },
     {
@@ -104,7 +113,7 @@ const gNotes = [
     title: 'New Born'
     },
     style: {
-    backgroundColor: '#9AD0EC'
+    backgroundColor: '#9AD0EC80'
     }
     },
     {
@@ -112,7 +121,7 @@ const gNotes = [
         type: 'NoteTodos',
         isPinned: false,
         style: {
-            backgroundColor: '#EB6383'
+            backgroundColor: '#d7aefb80'
         },
         info: {
             title: 'Get my stuff together',
@@ -134,7 +143,7 @@ const gNotes = [
             title: 'Joni and Me'
         },
         style: {
-            backgroundColor: '#F3D1F4'
+            backgroundColor: '#fdcfe880'
         }
     }
 ]

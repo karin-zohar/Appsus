@@ -27,10 +27,18 @@ export function NoteIndex() {
         setFilterBy(prevFilterBy => ({...prevFilterBy, ...filterBy}))
     }
 
+    function onRemoveNote(noteId) {
+        noteService.remove(noteId).then(() => {
+            const updatedBooks = books.filter(note => note.id !== noteId)
+            setNotes(updatedNotes)
+            // showSuccessMsg(`Book (${NoteId}) removed!`)
+        })    
+    }
+
     return (
        <section className="note-app">
         <NoteFilter onSetFilter={onSetFilter} filterBy={filterBy}/>
-        <NoteList notes={notes}/>
+        <NoteList notes={notes} onRemoveNote={onRemoveNote} />
        </section>
     )
 }

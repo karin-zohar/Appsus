@@ -23,7 +23,6 @@
     margin-block: 10px;
     border: 1px solid lightgray;
     border-radius: 10px;
-    background-color: bisque;
 }
 
 .note-preview:hover .note-toolbar {
