@@ -30,6 +30,6 @@
   'opsz' 48
 }
 
-.magnifier::before{
+.magnifier::before {
     content: '\e8b6';
 }
