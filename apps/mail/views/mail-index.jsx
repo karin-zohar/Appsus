@@ -14,7 +14,7 @@ export function MailIndex() {
     useEffect(() => {
         loadMails()
         setSearchParams(filterBy)
-    }, [filterBy])
+    }, [filterBy, mails])
 
     function loadMails() {
         mailService.query(filterBy)

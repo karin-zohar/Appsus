@@ -4,6 +4,7 @@ import { utilService } from "../../../services/util.service.js"
 
 export function NotePreview({ note }) {
     const [cmpType, setCmpType] = useState()
+    
     function DynamicCmp(props) {
         switch (props.cmpType) {
             case 'NoteTxt':
@@ -35,7 +36,6 @@ export function NotePreview({ note }) {
                 <section>
                     <img src={`${note.info.url}`} alt="note image" />
                 </section>
-                {/* {`../../../assets/img/${note.info.url}.jpg`} */}
             </section>
         )
     }

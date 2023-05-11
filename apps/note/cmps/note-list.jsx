@@ -13,10 +13,8 @@ export function NoteList({ notes, onRemoveNote }) {
                     const noteBgC = { backgroundColor: `${note.style.backgroundColor}` }
 
                     return (
-
                         <li key={note.id} >
                             <section style={noteBgC} className="note-preview">
-                                {console.log(note.id)}
                                 <span className="note-toolbar material-symbols-outlined pin-note icon-bg transparent"></span>
                                 <NotePreview note={note} />
                                 <div className="note-toolbar">

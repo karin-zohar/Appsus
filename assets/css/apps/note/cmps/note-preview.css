@@ -103,3 +103,13 @@ opacity: 0;
 .copy:hover {
    cursor: pointer;
 }
+
+.check-box::before {
+    content: '\f1fe';
+    position: absolute;
+    transform: translate(20%, 15%);
+}
+
+.check-box:hover {
+   cursor: pointer;
+}

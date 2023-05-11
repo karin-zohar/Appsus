@@ -2,6 +2,7 @@ const { useState, useEffect} = React
 const { Link, useSearchParams  } = ReactRouterDOM
 
 import { NoteFilter } from "../cmps/note-filter.jsx"
+import { NoteAdd } from "../cmps/note-add.jsx"
 import { NoteList } from "../cmps/note-list.jsx"
 import { noteService} from "../services/note.service.js"
 
@@ -29,7 +30,7 @@ export function NoteIndex() {
 
     function onRemoveNote(noteId) {
         noteService.remove(noteId).then(() => {
-            const updatedBooks = books.filter(note => note.id !== noteId)
+            const updatedNotes = notes.filter(note => note.id !== noteId)
             setNotes(updatedNotes)
             // showSuccessMsg(`Book (${NoteId}) removed!`)
         })    
@@ -38,6 +39,7 @@ export function NoteIndex() {
     return (
        <section className="note-app">
         <NoteFilter onSetFilter={onSetFilter} filterBy={filterBy}/>
+        <NoteAdd />
         <NoteList notes={notes} onRemoveNote={onRemoveNote} />
        </section>
     )

@@ -195,13 +195,16 @@ function getEmptyNote() {
     return {
         id: '',
         createdAt: new Date().getTime,
-        type: '',
+        type: 'NoteTxt',
         isPinned: false,
         style: {
             backgroundColor: '#00d'
         },
         info: {
-            txt: ''
+            txt: '',
+            title: '',
+            url: '',
+            todos: [],
         }
     }
 }

@@ -7,7 +7,8 @@ export const utilService = {
     getDayName,
     getMonthName,
     saveToStorage,
-    loadFromStorage
+    loadFromStorage,
+    getTimeString
 }
 
 
@@ -66,9 +67,29 @@ function getDayName(date, locale) {
 }
 
 
+
 function getMonthName(date) {
     const monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
     ]
     return monthNames[date.getMonth()]
+}
+
+function getTimeString(date) {
+    const now = new Date()
+    const diff = now - date
+    
+    //by milliseconds:
+    const day = 86400000
+    const week = 604800000
+
+    const month = getMonthName(date)
+    const monthDay = date.getDate()
+    const hours = padNum(date.getHours())
+    const minutes = padNum(date.getMinutes())
+
+    let formattedDate = (diff > week) ? `${monthDay} ${month}` :
+        (diff > day) ? `last ${getDayName(date, 'en-GB')}` : `${hours}:${minutes}`
+
+    return formattedDate
 }
