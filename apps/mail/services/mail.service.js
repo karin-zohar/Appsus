@@ -8,17 +8,8 @@ const loggedinUser = {
     fullname: 'Alex Stone'
 }
 
-const demoUsers = [{
-    email: 'alissa@appsus.com',
-    fullname: 'Alissa Smith'
-},
-{
-    email: 'ellen@netflix.com',
-    fullname: 'Netflix'
-},
-]
 
-const labels = ['critical', 'family', 'work', 'friends', 'spam', 'memories', 'romantic']
+const labels = ['critical', 'family', 'work', 'friends', 'spam', 'memories', 'romantic', 'shopping']
 
 _createMails()
 
@@ -76,18 +67,15 @@ function filterMails(mails, filterBy) {
 }
 
 function updateMailProperty(mailId, field, newValue) {
-    // console.log('mailId: ', mailId)
-    // console.log('field: ', field)
-    // console.log('newValue: ', newValue)
-    // const mail = get(mailId)
-    // console.log('mail: ', mail)
-    // mail[field] = newValue
-    // save(mail)
-    console.log('update mail property')
+    get(mailId)
+        .then(mail => {
+            mail[field] = newValue
+            save(mail)
+        })
 }
 
 function addMail(mail) {
-    mail.sentAt = new Date
+    mail.sentAt = (new Date()).toISOString()
     console.log('mail.sentAt: ', mail.sentAt)
     mail.state = 'sent'
     mail.sender = loggedinUser
@@ -121,30 +109,171 @@ function getDefaultFilter(searchParams = { get: () => { } }) {
     }
 }
 
+// demo data
 function _createMails() {
+    const demoUsers = [{
+        email: 'alissa@appsus.com',
+        fullname: 'Alissa Smith'
+    },
+    {
+        email: 'newsletter@laudible.com',
+        fullname: 'Laudible.com'
+    },
+    {
+        email: 'MichaelCo@Koogle.com',
+        fullname: 'Michael Cohen'
+    },
+    {
+        email: 'Leah@placebook.com',
+        fullname: 'Leah Aharon'
+    },
+    {
+        email: 'marketing@petflix.com',
+        fullname: 'Petflix'
+    },
+    {
+        email: 'logistics@lammazon.com',
+        fullname: 'Lammazon'
+    },
+    {
+        email: 'marketing@scotify.com',
+        fullname: 'Scotify'
+    },
+    {
+        email: 'ordering@Baliexpress.com',
+        fullname: 'Bali Express'
+    },
+    {
+        email: 'moo@moolingo.com',
+        fullname: 'Moolingo'
+    },
+    {
+        email: 'updates@winstagram.com',
+        fullname: 'Winstagram'
+    },
+    {
+        email: 'updates@twistcord.com',
+        fullname: 'Twistcord'
+    },
+
+    ]
     let mails = utilService.loadFromStorage(MAIL_KEY)
     if (!mails || !mails.length) {
         mails = []
-        mails.push(_createMail('hi Alex!',
-            'I am writing to tell you about something interesting that happened today. You are not going to believe it!', demoUsers[0], loggedinUser, ['friends', 'memories']))
-        mails.push(_createMail('Good news!', `I hope you've been doing well! can we meet up soon? I have somehtingto tell you`, demoUsers[0], loggedinUser, ['work']))
-        mails.push(_createMail(`Don't miss out on our exclusive offer!`, `Hey there,
 
-        We wanted to remind you that our exclusive offer is ending soon. This is your last chance to take advantage of our special discount and get 20% off your next purchase. Don't miss out!
+        mails.push(_createMail('2023-05-17T03:24:00',
+            'Super exciting news',
+            'How are you? Let me know when we can meet up. Something VERY interesting that happened today. You are not going to believe it!',
+            demoUsers[0],
+            loggedinUser,
+            ['friends', 'memories']))
+
+        mails.push(_createMail('2023-05-17T03:24:00',
+            'Reminder: Upcoming Meeting with John',
+            `Dear Alex,
         
-        Visit our website and use the promo code SAVE20 at checkout to claim your discount. We hope to see you soon!
+        I just wanted to remind you about our upcoming meeting with John tomorrow at 10am in Conference Room A. We'll be discussing the latest project updates and timelines, so please come prepared with any questions or concerns you may have.
         
-        Best,
-        The Sales Team`, demoUsers[1], loggedinUser, ['spam']))
+        Looking forward to seeing you there.
+        
+        Best regards,
+        Michael`,
+            demoUsers[2],
+            loggedinUser,
+            ['work']))
+
+        mails.push(_createMail('2023-05-17T03:24:00',
+            'Job Interview Invitation',
+            `Thank you for submitting your application for the Marketing Manager position at our company. We were impressed with your qualifications and experience, and would like to invite you for an interview at our office next week.
+            Our hiring assistant will reach out to you soon to coordinate a date and time for the interview.
+            We look forward to meeting you in person and learning more about your skills and background.
+            
+            Best regards,
+            The Hiring Team`,
+            demoUsers[3],
+            loggedinUser,
+            ['work', 'critical']))
+
+        mails.push(_createMail('2023-05-14T03:08:00',
+            'New deals arrive every month!',
+            `We have an amazing deal for you! Shop this month's fresh selection.`,
+            demoUsers[1],
+            loggedinUser,
+            ['spam']))
+
+        mails.push(_createMail('2023-05-13T08:24:00',
+            'Discover our most watched shows',
+            `Breaking Bird, Orangutan is the New Black and Wooflyn 99 are already waiting for your next petflix & chill session. So what are you waiting for?
+             Grab some popcorn and enjoy the show!`,
+            demoUsers[4],
+            loggedinUser,
+            ['spam']))
+
+        mails.push(_createMail('2023-05-11T11:52:00',
+            'Discover our most watched shows',
+            `Breaking Bird, Orangutan is the New Black and Wooflyn 99 are already waiting for your next petflix & chill session. So what are you waiting for?
+             Grab some popcorn and enjoy the show!`,
+            demoUsers[4],
+            loggedinUser,
+            ['spam']))
+
+        mails.push(_createMail('2023-05-09T14:34:00',
+            'Your order is on its way',
+            `This email is to inform you that your order has been dispatched and will reach your destination soon.
+                It will arrive by drone within 5 business hours. You are advised to stay indoors to avoid getting hit on the head by a heavy package.`,
+            demoUsers[5],
+            loggedinUser,
+            ['shopping']))
+
+        mails.push(_createMail('2023-04-30T15:21:00',
+            'Playlists made just for you.',
+            `Meet your personalized playlists. We made them just for you, full of songs we think you'll love.`,
+            demoUsers[6],
+            loggedinUser,
+            ['spam']))
+
+        mails.push(_createMail('2023-04-28T10:14:00',
+            'Order 3021704758 has shipped.',
+            `Your order has shipped! You can click below to check your delivery status or see more details.`,
+            demoUsers[7],
+            loggedinUser,
+            ['spam']))
+
+        mails.push(_createMail('2023-04-27T03:16:00',
+            '2023 is the year you learn a language',
+            `Are you ready to get back to your awesome language studies? 
+            Unlock a year full of adventure, opportunities, and self-improvement by spending 5 minutes a day on Moolingo!`,
+            demoUsers[8],
+            loggedinUser,
+            ['spam']))
+
+        mails.push(_createMail('2023-04-26T08:45:00',
+            `See what's been happening on Winstagram`,
+            `You have 39 notifications you may have not seen. 
+            12 of your friends have posted on Winstagram today. See what they are up to! `,
+            demoUsers[9],
+            loggedinUser,
+            ['spam']))
+
+        mails.push(_createMail('2023-04-23T18:08:00',
+            `You have 5 unread messages`,
+            `Hi Alex,
+            Your friends are messaging you on Twistcord. Don't leave them lonely! 
+            Log in to Twistcord and hop on a call whenever you're ready. `,
+            demoUsers[10],
+            loggedinUser,
+            ['friends']))
+
         utilService.saveToStorage(MAIL_KEY, mails)
     }
 }
 
-function _createMail(subject, body, sender, receiver, labels = []) {
+function _createMail(date, subject, body, sender, receiver, labels = []) {
     const mail = getEmptyMail(subject, body, sender, receiver)
     mail.id = utilService.makeId()
     mail.labels = labels
-    mail.sentAt = new Date
+    mail.sentAt = (new Date(date)).toISOString()
+    mail.isRead = false
     return mail
 }
 

@@ -18,3 +18,7 @@
      white-space: nowrap;
      text-align: start;
  }
+
+ .line-is-read {
+    background-color: #f2f6fc;
+ }

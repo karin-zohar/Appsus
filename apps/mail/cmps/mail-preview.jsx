@@ -1,26 +1,27 @@
 const { Fragment } = React
 
-export function MailPreview({ mail }) {
+import { utilService } from "../../../services/util.service.js"
 
-    // const bodyPreview = mail.body.substring(0, 150)
+
+export function MailPreview({ mail }) {
+    // console.log('mail: ', mail)
+    const time = utilService.getTimeString(mail.sentAt)
+    const isBold = (mail.isRead) ? '' : 'bold' 
+    console.log('isBold: ', isBold)
 
     return (
         <Fragment>
-            
-            <td>{mail.sender.email}</td>
-            <td>
+           
+            <td className={isBold}>{mail.sender.fullname}</td>
+            <td className={isBold}>
                 <span className=" short-text">
                     {mail.subject}
                 </span>
             </td>
             <td className='mail-body-preview short-text' >
-            {/* {bodyPreview} */}
-            {mail.body}
-                {/* <span className="short-text">
-                    
-                </span> */}
+                {mail.body}
             </td>
-            <td>{mail.sentAt}</td>
+            <td className={isBold}>{time}</td>
         </Fragment>
 
     )

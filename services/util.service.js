@@ -69,13 +69,14 @@ function getDayName(date, locale) {
 
 
 function getMonthName(date) {
-    const monthNames = ["January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
     ]
     return monthNames[date.getMonth()]
 }
 
 function getTimeString(date) {
+    date = new Date(date)
     const now = new Date()
     const diff = now - date
     
@@ -89,7 +90,7 @@ function getTimeString(date) {
     const minutes = padNum(date.getMinutes())
 
     let formattedDate = (diff > week) ? `${monthDay} ${month}` :
-        (diff > day) ? `last ${getDayName(date, 'en-GB')}` : `${hours}:${minutes}`
+        (diff > day) ? `${getDayName(date, 'en-GB')}` : `${hours}:${minutes}`
 
     return formattedDate
 }

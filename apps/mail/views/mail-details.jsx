@@ -27,9 +27,9 @@ export function MailDetails() {
     }
     
     if (!mail) return (<h1>loading...</h1>)
-    console.log('mail.sentAt: ', mail.sentAt)
-    // const time = utilService.getTimeString(mail.sentAt)
-    // const time = 'hi'
+    // console.log('mail.sentAt: ', mail.sentAt)
+    const time = utilService.getTimeString(mail.sentAt)
+    
     return (
         <section className="mail-details">
             <h2>{mail.subject}</h2>
@@ -43,7 +43,7 @@ export function MailDetails() {
                         <tr>
                             <td>{mail.sender.fullname}</td>
                             <td>{mail.sender.email}</td>
-                            <td>{mail.sentAt}</td>
+                            <td>{time}</td>
                             <td><MailStar mail={mail}/></td>
                             <td><div className="reply material-symbols-outlined icon-bg"></div></td>
                             
