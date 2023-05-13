@@ -74,7 +74,7 @@ function filterMails(mails, filterBy) {
     }
 
     if (filterBy.inbox === 'true') {
-        mails = mails.filter(mail => mail.sender.email !== loggedinUser.email)
+        mails = mails.filter(mail => mail.sender.email !== loggedinUser.email && mail.state !== 'bin')
     }
     
     if (filterBy.sent === 'true') {
