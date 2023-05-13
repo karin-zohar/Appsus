@@ -24,7 +24,7 @@ export function NoteFilter({ filterBy, onSetFilter }) {
             <form onSubmit={onSubmitFilter} className="filter-form flex justify-center align-center">
                 <span className="material-symbols-outlined magnifier icon-bg transparent"></span>
                 <input className="filter-input" onChange={handleChange} name="txt" id ="txt" type="text" placeholder="Search" value={txt}/>
-                <button className="btn-filter-cancel" >X</button>
+                {/* <button className="btn-filter-cancel" >X</button> */}
             </form>
         </section>
     )

@@ -2,13 +2,23 @@
     --main-bg-color: lightblue;
     --clr1: rgb(96, 107, 91);
     --clr2: rgb(120, 99, 110);
-  
+
     --clr1bg: rgb(153, 166, 149);
     --clr1bg-light: rgb(205, 221, 200);
     --clr2bg: rgb(233, 206, 221);
     --clr2bg-light: rgb(253, 236, 246);
-  
+
     --gray1: rgb(240, 240, 240);
     --gray2: rgb(155, 155, 155);
     --gray3: rgb(44, 44, 44);
+
+    --bgc1: #fdcfe880;
+    --bgc2: #d7aefb80;
+    --bgc3: #aecbfa80;
+    --bgc4: #a7ffeb80;
+    --bgc5: #cbf0f880;
+    --bgc6: #ccff9080;
+    --bgc7: #fff47580;
+    --bgc8: #FDBC1C80;
+    --bgc9: #f28b8280;
 }

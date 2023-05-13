@@ -19,7 +19,7 @@ export function NoteIndex() {
         // console.log('mount')
         loadNotes()
         setSearchParams(filterBy)
-    }, [filterBy, addNoteMode])
+    }, [filterBy, addNoteMode, notes])
 
     function loadNotes() {
         noteService.query(filterBy).then(setNotes)

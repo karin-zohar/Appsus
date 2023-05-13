@@ -61,7 +61,7 @@ export function NotePreview({ note }) {
                             <div className="todo-item">
                                 <input type="checkbox" />
                                 <h4>{todo.txt}</h4>
-                                <button>x</button>
+                                {/* <button>x</button> */}
                             </div>
                         </li>
                     )}

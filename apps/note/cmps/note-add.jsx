@@ -72,8 +72,8 @@ export function NoteAdd({ onAddNote }) {
                     </li>
                     <li className="input-btns flex row align-center justify-center space-between">
                         <span className="material-symbols-outlined trash icon-bg transparent" onClick={() => onAddNote()} title="close"></span>
-                        <span className="material-symbols-outlined color icon-bg transparent" title="Background color"></span>
-                        <span className="material-symbols-outlined image icon-bg transparent" title="Add image"></span>
+                        {/* <span className="material-symbols-outlined color icon-bg transparent" title="Background color"></span> */}
+                        {/* <span className="material-symbols-outlined image icon-bg transparent" title="Add image"></span> */}
                     </li>
                 </form>
             </ul>
