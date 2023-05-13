@@ -19,7 +19,7 @@ export function BookPreview({ book }) {
     const listPrice = book.listPrice
     return (
         <article className="book-preview">
-            <h2>Book Title: {book.title}</h2>
+            <h2>{book.title}</h2>
             <h4>Published Date: {book.publishedDate}{publishedDate()}</h4>
             <div className="img-container">
                 <img src={book.thumbnail} alt="book image" />
