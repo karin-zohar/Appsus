@@ -1,0 +1,44 @@
+.filter-container {
+    width: 60%;
+    max-width: 720px;
+    /* position: absolute;
+    margin-left: 200px;
+    margin-top: -75px ; */
+    margin-bottom: 1em;
+}
+
+.filter-form,form input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    background-color: inherit;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: #ffffff90;
+}
+
+.filter-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+   padding: 0 1em;
+}
+
+
+.btn-filter-cancel {
+    background-color: none;
+    background: none;
+    border: none;
+}
+
+.magnifier::before {
+    content: '\e8b6';
+    position: absolute;
+    transform: translate(20%, 20%);
+}

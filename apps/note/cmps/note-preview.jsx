@@ -21,9 +21,9 @@ export function NotePreview({ note }) {
     function NoteTxt(props) {
         const { note: { info, style, createdAt } } = props
         return (
-            <section>
-                <h2>{note.info.title}</h2>
-                <h3>{note.info.txt}</h3>
+            <section className="note-container">
+                <h3>{note.info.title}</h3>
+                <h4>{note.info.txt}</h4>
             </section>
         )
     }
@@ -31,8 +31,8 @@ export function NotePreview({ note }) {
     function NoteImg(props) {
         const { note: { info, style, createdAt } } = props
         return (
-            <section>
-                <h2>{note.info.title}</h2>
+            <section className="note-container">
+                <h3>{note.info.title}</h3>
                 <section>
                     <img src={`${note.info.url}`} alt="note image" />
                 </section>
@@ -44,7 +44,7 @@ export function NotePreview({ note }) {
         const { note: { info, style, createdAt } } = props
         return (
             <section className="note-container">
-                <h2>{note.info.title}</h2>
+                <h3>{note.info.title}</h3>
                 <section>
                     <TodosList todos={note.info.todos} />
                 </section>
@@ -60,7 +60,7 @@ export function NotePreview({ note }) {
                         <li key={todo.id}>
                             <div className="todo-item">
                                 <input type="checkbox" />
-                                <h3>{todo.txt}</h3>
+                                <h4>{todo.txt}</h4>
                                 <button>x</button>
                             </div>
                         </li>

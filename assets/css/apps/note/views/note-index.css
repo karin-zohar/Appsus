@@ -1,41 +1,77 @@
  /* note index */
-.note-app {
-    background-image: url(https://images.unsplash.com/photo-1679218407381-a6f1660d60e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQwfF9oYi1kbDRRLTRVfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60);
-    background-size: cover;
-}
+ .note-app {
+     background-image: url(https://images.unsplash.com/photo-1679218407381-a6f1660d60e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQwfF9oYi1kbDRRLTRVfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60);
+     background-size: cover;
+     margin: 0;
+ }
+
  .note-list {
-    column-count: auto;
-    column-width: 15em;
-    column-gap: 10px;
-    margin-inline: 1rem;
-    padding-top: 2em;
-}
+     column-count: auto;
+     column-width: 15em;
+     column-gap: 10px;
+     margin-inline: 1rem;
+     padding-top: 2em;
+ }
 
  .note-preview {
-    position: relative;
-    display: grid;
-    /* place-content: center; */
-    /* grid-template-columns: 30px, 80px; */
-    /* grid-template-columns: min-content minmax(10rem, 15rem); */
-    grid-auto-flow: row;
-    break-inside: avoid;
-    padding: 5px;
-    margin-block: 10px;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-}
+     position: relative;
+     display: grid;
+     /* place-content: center; */
+     /* grid-template-columns: 30px, 80px; */
+     /* grid-template-columns: min-content minmax(10rem, 15rem); */
+     grid-auto-flow: row;
+     break-inside: avoid;
+     padding: 5px;
+     margin-block: 10px;
+     border: 1px solid lightgray;
+     border-radius: 10px;
+ }
 
-.note-preview:hover .note-toolbar {
-opacity: 0.7;
+ .note-preview:hover .note-toolbar {
+     opacity: 0.7;
 
-}
+ }
 
-.note-preview img {
-    /* max-width: 100%; */
-    object-fit: contain;
-    padding: .5em .1em;
-}
+ .note-preview img {
+     /* max-width: 100%; */
+     object-fit: contain;
+     padding: .5em .1em;
+ }
 
  .note-preview:first-of-type {
-    margin-block-start: 0;
-}
+     margin-block-start: 0;
+ }
+
+ input[type="text"] {
+     border: none;
+     outline: none;
+ }
+
+ .note-index {
+     width: 80%;
+     max-width: 600px;
+     margin-left: 50%;
+     transform: translateX(-50%);
+ }
+
+ .new-note-placeholder {
+    width: 100%;
+ }
+
+ .input-placeholder {
+   padding: 2px 0;
+    margin: 0;
+    font-size: 1.3em;
+    margin-left: .8em;
+ }
+
+ .note-index {
+    margin-top: 1em;
+     border-bottom-left-radius: 8px;
+     border-bottom-right-radius: 8px;
+     border-top-left-radius: 8px;
+     border-top-right-radius: 8px;
+     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+     background-color: #fff;
+     transition: .3s;
+ }

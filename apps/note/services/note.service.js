@@ -32,11 +32,11 @@ const gNotes = [
         info: {
             title: 'Not to forget!!!',
             todos: [
-                { id: 'hid25g',txt: 'Short todo', doneAt: 187441111 },
-                { id: 'h4d2n4',txt: 'Coding power a lot...', doneAt: 187111111 },
-                { id: '11d2n4',txt: 'Driving license', doneAt: null },
-                { id: 'hi3wn4',txt: 'Get this and that now', doneAt: 182563110 },
-                { id: 'hid2n4',txt: 'Another tododododod', doneAt: 187111555 },
+                { id: 'hid25g', txt: 'Short todo', doneAt: 187441111 },
+                { id: 'h4d2n4', txt: 'Coding power a lot...', doneAt: 187111111 },
+                { id: '11d2n4', txt: 'Driving license', doneAt: null },
+                { id: 'hi3wn4', txt: 'Get this and that now', doneAt: 182563110 },
+                { id: 'hid2n4', txt: 'Another tododododod', doneAt: 187111555 },
             ]
         }
     },
@@ -49,8 +49,16 @@ const gNotes = [
             backgroundColor: '#fff47580'
         },
         info: {
-            title: 'New Note1',
-            txt: 'Fullsasdf asdfa asdf dfa asdf a asdfasdf!'
+            title: 'Shortcuts ',
+            txt: ` 🍎🍏The apple version: (Thanks Alex Knobbe)Shortcut Action
+            Command-A Select All
+            Command-B Bold selected text or toggle bold on or off
+            Command-C Copy
+            Command-F Find
+            Command-H Hide windows of currently running application
+            Command-I Italicize selected text or toggle italic on or off
+            Command-M Minimize
+            `
         }
     },
     {
@@ -62,8 +70,8 @@ const gNotes = [
             backgroundColor: '#ccff9080'
         },
         info: {
-            title: 'New Note2',
-            txt: 'sadf asdfFu asdl lst ac`dvfk Me Baby asdgf asdgf asdg asdgasdfga afg asdfg sdfg sdfg sdfg sdfg sdfg asdfg asd!'
+            title: 'Trip to Norway',
+            txt: 'Set dates and make sure it works with the car etc.'
         }
     },
     {
@@ -75,8 +83,8 @@ const gNotes = [
             backgroundColor: '#cbf0f880'
         },
         info: {
-            title: 'New Note3',
-            txt: 'Full sadstaas asdf aadf adf!'
+            title: 'School-',
+            txt: 'The teacher will decide about class location, it will be 20/80%'
         }
     },
     {
@@ -88,8 +96,8 @@ const gNotes = [
             backgroundColor: '#a7ffeb80'
         },
         info: {
-            title: 'New Note4',
-            txt: 'asdf ck Ma sdf asdfe Baby!'
+            title: 'Toyota',
+            txt: 'Last service 22/7/2022: 182,037km, oil, air filter and brakes. Total 738₪'
         }
     },
     {
@@ -105,16 +113,16 @@ const gNotes = [
         }
     },
     {
-    id: '34Udn2Q',
-    type: 'NoteImg',
-    isPinned: false,
-    info: {
-    url: 'https://paradepets.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkxMzY1Nzg4NjczMzIwNTQ2/cutest-dog-breeds-jpg.jpg',
-    title: 'New Born'
-    },
-    style: {
-    backgroundColor: '#9AD0EC80'
-    }
+        id: '34Udn2Q',
+        type: 'NoteImg',
+        isPinned: false,
+        info: {
+            url: 'https://paradepets.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkxMzY1Nzg4NjczMzIwNTQ2/cutest-dog-breeds-jpg.jpg',
+            title: 'New Born'
+        },
+        style: {
+            backgroundColor: '#9AD0EC80'
+        }
     },
     {
         id: 'k423nT',

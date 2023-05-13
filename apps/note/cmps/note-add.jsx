@@ -5,8 +5,8 @@ import { noteService } from "../services/note.service.js"
 export function NoteAdd({ onAddNote }) {
     const [noteToAdd, setNoteToAdd] = useState(noteService.getEmptyNote())
     const [selectedButton, setSelectedButton] = useState()
-    const { title, txt } = noteToAdd
-
+    const { title, txt, style } = noteToAdd
+    
     useEffect(() => {
 
     }, [])
@@ -57,18 +57,18 @@ export function NoteAdd({ onAddNote }) {
             })
             .catch(err => {
                 console.log('Had issue to add note:', err);
-                // showErrorMsg('Can not save car!')
+                // showErrorMsg('Can not save note!')
             })
     }
 
     return (
-        <section className="flex justify-center align-center">
+        <section className="note-add-container flex justify-center align-center">
             <ul className="note-add-form flex clean-list">
                 <form onSubmit={onSaveNote} className="inputs-form">
-                    <li className="input-title flex column">
+                    <li className="flex column">
                         <label htmlFor="title"></label>
-                        <input value={title} onChange={handleChange} name="title" id="title" type="text" placeholder="Title" />
-                        <textarea required value={txt} onChange={handleChange} name="txt" id="text" type="text" placeholder="Take a note" rows="2"></textarea>
+                        <input className="input-title" value={title} onChange={handleChange} name="title" id="title" type="text" placeholder="Title" />
+                        <textarea className="input-txt" required value={txt} onChange={handleChange} name="txt" id="text" type="text" placeholder="Take a note" rows="2"></textarea>
                     </li>
                     <li className="input-btns flex row align-center justify-center space-between">
                         <span className="material-symbols-outlined trash icon-bg transparent" onClick={() => onAddNote()} title="close"></span>
@@ -78,9 +78,7 @@ export function NoteAdd({ onAddNote }) {
                 </form>
             </ul>
             <section>
-                {/* <button onClick={() => handleButtonClick('Txt')} >Take a note...</button>
-                <button className="material-symbols-outlined check-box" title="Add check box" onClick={() => handleButtonClick('NewTodo')}></button>
-                <button className="material-symbols-outlined image" title="Add image" onClick={() => handleButtonClick('NewImg')}></button> */}
+                
             </section>
 
         </section>

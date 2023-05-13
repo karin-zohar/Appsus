@@ -21,11 +21,11 @@ export function NoteFilter({filterBy, onSetFilter}) {
 
     const { type} = filterByToEdit
     return (
-        <section>
-            <form onSubmit={onSubmitFilter}>
-                <span className="material-symbols-outlined magnifier"></span>
-                <input value={type} onChange={handleChange}type="text" placeholder="Search" />
-                <button>X</button>
+        <section className="filter-container flex justify-center align-center">
+            <form onSubmit={onSubmitFilter} className="filter-form flex justify-center align-center">
+                <span className="material-symbols-outlined magnifier icon-bg transparent"></span>
+                <input className="filter-input" value={type} onChange={handleChange}type="text" placeholder="Search" />
+                <button className="btn-filter-cancel" >X</button>
             </form>
         </section>
     )
