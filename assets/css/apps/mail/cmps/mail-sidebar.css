@@ -1,0 +1,46 @@
+.mail-sidebar {
+    background-color: #f6f8fc;
+}
+
+.filtering-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.filtering-links button {
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 0.5em;
+    margin-inline: 1em;
+}
+
+.filtering-links button:hover {
+    background-color: rgba(211, 211, 211, 0.5);
+    border-radius: 2em;
+}
+
+.filtering-links .active {
+    font-weight: 700;
+}
+
+.compose-btn {
+    background-color: #c2e7ff;
+    border: none;
+    padding: 0.8em;
+    margin-block-end: 1em;
+    margin-inline: 1em;
+    border-radius: 1rem;
+    text-align: center;
+    text-justify: center;
+}
+
+.compose-btn-icon::before {
+    content: '\e3c9';
+    color: inherit;
+    font-size: 0.7em;
+}
+
+.compose-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

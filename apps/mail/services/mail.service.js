@@ -73,8 +73,8 @@ function filterMails(mails, filterBy) {
         mails = mails.filter(mail => !mail.isRead)
     }
 
-    if (filterBy.sent === 'false') {
-        mails = mails.filter(mail => mail.sender.email !== loggedinUser.email)
+    if (filterBy.inbox === 'true') {
+        mails = mails.filter(mail => mail.sender.email !== loggedinUser.email && mail.state !== 'bin')
     }
     
     if (filterBy.sent === 'true') {
@@ -125,7 +125,9 @@ function getDefaultFilter(searchParams = { get: () => { } }) {
         txt: searchParams.get('txt') || '',
         isRead: searchParams.get('isRead') || '',
         isStarred: searchParams.get('isStarred') || '',
-        sent: searchParams.get('sent') || ''
+        sent: searchParams.get('sent') || '',
+        inbox: searchParams.get('inbox') || '',
+        bin: searchParams.get('bin') || ''
     }
 }
 
