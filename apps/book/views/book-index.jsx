@@ -18,7 +18,7 @@ export function BookIndex() {
     useEffect(() => {
         // console.log('mount')
         loadBooks()
-        showSuccessMsg('Welcome to the book index!')
+        // showSuccessMsg('Welcome to the book index!')
         setSearchParams(filterBy)
     }, [filterBy])
 

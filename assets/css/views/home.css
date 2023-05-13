@@ -26,10 +26,12 @@
     background: none;
     border: none;
     font-family: Yeseva-one;
-    font-size: 1em;
+    font-size: 1.2em;
+    margin-inline: 1.3em;
     transition: 0.3s;
  }
 
  .home-btns button:hover {
-    color: darkblue;
+   scale: 1.1;
+   color: darkblue;
  }
