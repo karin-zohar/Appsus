@@ -171,16 +171,30 @@ export const noteService = {
 }
 
 function query(filterBy = {}) {
-    // console.log('filterBy service:', filterBy)
     return storageService.query(NOTE_KEY)
         .then(notes => {
-            if (filterBy.type) {
-                const regExp = new RegExp(filterBy.title, 'i')
-                notes = notes.filter(note => regExp.test(note.title))
+            // _filterNotes(notes, filterBy)
+            if (filterBy.txt) {
+                const regExp = new RegExp(filterBy.txt, 'i')
+                notes = notes.filter(note => 
+                    regExp.test(note.info.title) ||
+                    regExp.test(note.info.txt)
+                )
             }
 
             return notes
         })
+}
+
+function _filterNotes(notes, filterBy) {
+    if (filterBy.txt) {
+        const regExp = new RegExp(filterBy.txt, 'i')
+        notes = notes.filter(note =>
+            regExp.test(note.info.title) ||
+            regExp.test(note.info.txt)
+            )
+    }
+    return notes
 }
 
 function get(noteId) {
@@ -217,8 +231,10 @@ function getEmptyNote() {
     }
 }
 
-function getDefaultFilter() {
-    return { type: '' }
+function getDefaultFilter(searchParams = { get: () => {} }) {
+    return { 
+        txt: searchParams.get('txt') || '',
+     }
 }
 
 function _createNotes() {

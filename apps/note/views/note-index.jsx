@@ -26,6 +26,7 @@ export function NoteIndex() {
     }
 
     function onSetFilter(filterBy) {
+        console.log(filterBy);
         setFilterBy(prevFilterBy => ({ ...prevFilterBy, ...filterBy }))
     }
 
