@@ -7,7 +7,7 @@
     margin-bottom: 1em;
 }
 
-.filter-form,form input {
+.filter-form {
     width: 100%;
     border: none;
     outline: none;

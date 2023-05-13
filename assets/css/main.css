@@ -13,7 +13,6 @@
 @import './apps/note/views/note-index.css';
 
 @import './apps/mail/views/mail-index.css';
-
 @import './apps/mail/views/mail-details.css';
 @import './apps/mail/views/mail-compose.css';
 
@@ -31,3 +30,13 @@
 @import './apps/mail/cmps/mail-list.css';
 @import './apps/mail/cmps/mail-preview.css';
 @import './apps/mail/cmps/mail-star.css';
+
+/* Books-Cmps */
+
+@import './apps/book/cmps/book-details.css';
+@import './apps/book/cmps/book-edit.css';
+@import './apps/book/cmps/book-filter.css';
+@import './apps/book/cmps/book-list.css';
+@import './apps/book/cmps/book-preview.css';
+@import './apps/book/cmps/star-rating.css';
+@import './apps/book/cmps/user-msg.css';

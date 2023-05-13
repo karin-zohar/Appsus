@@ -1,0 +1,38 @@
+.book-filter h2{
+text-align: center;
+}
+
+.book-filter form {
+    display: grid;
+    grid-template-columns: 130px 200px;
+    justify-content: center;
+}
+
+.book-filter form input {
+   border-bottom: .2px solid gray; 
+}
+
+.book-filter form label {
+   align-self: center;
+}
+
+.book-filter button {
+ border-radius: 8px;
+ background-color: white;
+ grid-column: 1 / -1;
+ align-items: center;
+}
+
+.btn-add-book {
+    position: relative;
+    font-size: 14px;
+    width: 100px;
+    display: inline-block;
+    margin-top: 1em;
+    margin-left: 2.3em;
+    font-weight: 600;
+    padding: 1px 18px;
+    border: 1.9px solid black;
+    border-radius: 8px;
+    transform: translate(0%, -165%);
+}

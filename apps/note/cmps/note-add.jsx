@@ -65,7 +65,7 @@ export function NoteAdd({ onAddNote }) {
         <section className="note-add-container flex justify-center align-center">
             <ul className="note-add-form flex clean-list">
                 <form onSubmit={onSaveNote} className="inputs-form">
-                    <li className="flex column">
+                    <li className="inputs-li flex column">
                         <label htmlFor="title"></label>
                         <input className="input-title" value={title} onChange={handleChange} name="title" id="title" type="text" placeholder="Title" />
                         <textarea className="input-txt" required value={txt} onChange={handleChange} name="txt" id="text" type="text" placeholder="Take a note" rows="2"></textarea>
