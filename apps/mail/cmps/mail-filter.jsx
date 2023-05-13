@@ -18,7 +18,7 @@ export function MailFilter({ filterBy, onSetFilter }) {
         ev.preventDefault()
         onSetFilter(filterByToEdit)
     }
-    const { txt, isStarred, isRead } = filterByToEdit
+    const { txt } = filterByToEdit
 
     return (
         <section className="mail-filter">

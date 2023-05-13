@@ -52,3 +52,17 @@
 .bold {
     font-weight: 700;
 }
+
+.btn {
+    border: solid 1px gray;
+    color: gray;
+    background: none;
+    padding: 0.6em;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(128, 128, 128, 0.240);
+    
+}

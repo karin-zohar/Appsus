@@ -21,11 +21,12 @@ export const mailService = {
     getEmptyMail,
     getDefaultFilter,
     updateMailProperty,
-    addMail
+    addMail,
+    getLoggedInUser
 }
 
 function query(filterBy = {}) {
-    // console.log('filterBy service:', filterBy)
+    console.log('filterBy service:', filterBy)
     return storageService.query(MAIL_KEY)
         .then(mails => filterMails(mails, filterBy))
 }
@@ -46,41 +47,59 @@ function save(mail) {
     }
 }
 
+function getLoggedInUser() {
+    return loggedinUser
+}
+
 function filterMails(mails, filterBy) {
     if (filterBy.txt) {
         const regExp = new RegExp(filterBy.txt, 'i')
         mails = mails.filter(mail =>
             regExp.test(mail.subject) ||
             regExp.test(mail.body) ||
-            regExp.test(mail.sender))
+            regExp.test(mail.sender.fullname) ||
+            regExp.test(mail.sender.email)) 
     }
 
-    if (filterBy.isRead) {
-        mails = mails.filter(mail => mail.isRead === filter.isRead)
+    if (filterBy.isStarred === 'true') {
+        mails = mails.filter(mail => mail.isStarred === true)
+    }
+    
+    if (filterBy.isRead === 'true') {
+        mails = mails.filter(mail => mail.isRead === true)
     }
 
-    if (filterBy.isStarred) {
-        mails = mails.filter(mail => mail.isStarred === filter.isStarred)
+    if (filterBy.isRead === 'false') {
+        mails = mails.filter(mail => !mail.isRead)
+    }
+
+    if (filterBy.sent === 'false') {
+        mails = mails.filter(mail => mail.sender.email !== loggedinUser.email)
+    }
+    
+    if (filterBy.sent === 'true') {
+        mails = mails.filter(mail => mail.sender.email === loggedinUser.email)
+    }
+    
+    if (filterBy.bin === 'true') {
+        mails = mails.filter(mail => mail.state === 'bin')
     }
 
     return mails
 }
 
 function updateMailProperty(mailId, field, newValue) {
-    get(mailId)
+    return get(mailId)
         .then(mail => {
             mail[field] = newValue
-            save(mail)
+            return save(mail)
         })
 }
 
 function addMail(mail) {
     mail.sentAt = (new Date()).toISOString()
-    console.log('mail.sentAt: ', mail.sentAt)
     mail.state = 'sent'
     mail.sender = loggedinUser
-    console.log('mail: ', mail)
-    console.log('mail.id: ', mail.id)
     save(mail)
 }
 
@@ -106,6 +125,7 @@ function getDefaultFilter(searchParams = { get: () => { } }) {
         txt: searchParams.get('txt') || '',
         isRead: searchParams.get('isRead') || '',
         isStarred: searchParams.get('isStarred') || '',
+        sent: searchParams.get('sent') || ''
     }
 }
 
@@ -203,19 +223,11 @@ function _createMails() {
 
         mails.push(_createMail('2023-05-13T08:24:00',
             'Discover our most watched shows',
-            `Breaking Bird, Orangutan is the New Black and Wooflyn 99 are already waiting for your next petflix & chill session. So what are you waiting for?
+            `Breaking Bird, Orangutan is the New Black and Wooflyn 99 are already waiting for your next petflix & cheetah session. So what are you waiting for?
              Grab some popcorn and enjoy the show!`,
             demoUsers[4],
             loggedinUser,
-            ['spam']))
-
-        mails.push(_createMail('2023-05-11T11:52:00',
-            'Discover our most watched shows',
-            `Breaking Bird, Orangutan is the New Black and Wooflyn 99 are already waiting for your next petflix & chill session. So what are you waiting for?
-             Grab some popcorn and enjoy the show!`,
-            demoUsers[4],
-            loggedinUser,
-            ['spam']))
+            ['spam'])) 
 
         mails.push(_createMail('2023-05-09T14:34:00',
             'Your order is on its way',

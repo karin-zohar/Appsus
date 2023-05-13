@@ -4,10 +4,8 @@ import { utilService } from "../../../services/util.service.js"
 
 
 export function MailPreview({ mail }) {
-    // console.log('mail: ', mail)
     const time = utilService.getTimeString(mail.sentAt)
     const isBold = (mail.isRead) ? '' : 'bold' 
-    console.log('isBold: ', isBold)
 
     return (
         <Fragment>
