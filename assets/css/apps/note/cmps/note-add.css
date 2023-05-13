@@ -5,9 +5,36 @@
    border-top-right-radius: 8px;
    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
    background-color: #fff ;
-   
+}
 
-   
+.note-add-container {
+    width: 100%;
+    /* background-color: ; this is where it affects */
+}
+
+.note-add-form {
+    width: 100%;
+}
+
+.inputs-form {
+    width: 100%;
+}
+
+.inputs-li {
+    width: 100%;
+}
+
+.input-title {
+    width: 100%;
+    font-size: 1.3em;
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+
+.input-txt {
+    font-size: 1.3em;
+    background-color: inherit;
 }
 
 .note-add-form,form input {
@@ -16,15 +43,18 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 10px 15px;
+    background-color: inherit;
 }
 .note-add-form,form textarea {
     border: none;
     outline: none;
     resize: none;
     padding: 10px 15px;
+    background-color: inherit;
 }
 
-form {
+.input-form {
     border: none;
 }
+
 

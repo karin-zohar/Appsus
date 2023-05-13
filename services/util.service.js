@@ -8,7 +8,8 @@ export const utilService = {
     getMonthName,
     saveToStorage,
     loadFromStorage,
-    getTimeString
+    getTimeString,
+    getCurrencySymbol
 }
 
 
@@ -94,3 +95,14 @@ function getTimeString(date) {
 
     return formattedDate
 }
+
+function getCurrencySymbol(currencyCode) {
+    switch (currencyCode) {
+      case 'EUR':
+        return '€'
+      case 'ILS':
+        return '₪'
+      case 'USD':
+        return '$'
+    }
+  }

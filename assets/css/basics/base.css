@@ -36,3 +36,25 @@ img {
     width: 100%;
     object-fit: cover;
 }
+
+button:hover {
+    cursor: pointer;
+}
+
+input[type="checkbox"]:hover {
+cursor: pointer;
+transition: 0.3s;
+}
+
+/* Dont stretch my Media */
+img,
+embed,
+video,
+object {
+  max-width: 100%
+}
+
+/* Simple and useful CSS Debugging Technique */
+.debug * {
+  outline: 1px solid gold
+}

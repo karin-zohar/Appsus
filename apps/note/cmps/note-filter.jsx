@@ -1,7 +1,6 @@
-const { useState, useEffect} = React
+const { useState, useEffect } = React
 
-export function NoteFilter({filterBy, onSetFilter}) {
-
+export function NoteFilter({ filterBy, onSetFilter }) {
     const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
 
     useEffect(() => {
@@ -19,13 +18,13 @@ export function NoteFilter({filterBy, onSetFilter}) {
         onSetFilter(filterByToEdit)
     }
 
-    const { type} = filterByToEdit
+    const { txt } = filterByToEdit
     return (
-        <section>
-            <form onSubmit={onSubmitFilter}>
-                <span className="material-symbols-outlined magnifier"></span>
-                <input value={type} onChange={handleChange}type="text" placeholder="Search" />
-                <button>X</button>
+        <section className="filter-container">
+            <form onSubmit={onSubmitFilter} className="filter-form flex justify-center align-center">
+                <span className="material-symbols-outlined magnifier icon-bg transparent"></span>
+                <input className="filter-input" onChange={handleChange} name="txt" id ="txt" type="text" placeholder="Search" value={txt}/>
+                <button className="btn-filter-cancel" >X</button>
             </form>
         </section>
     )

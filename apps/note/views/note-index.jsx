@@ -26,6 +26,7 @@ export function NoteIndex() {
     }
 
     function onSetFilter(filterBy) {
+        console.log(filterBy);
         setFilterBy(prevFilterBy => ({ ...prevFilterBy, ...filterBy }))
     }
 
@@ -48,12 +49,12 @@ export function NoteIndex() {
     return (
         <section className="note-app">
             <NoteFilter onSetFilter={onSetFilter} filterBy={filterBy} />
-            <section className="note-index">
+            <section className="note-index flex justify-center align-center">
                 {!addNoteMode &&
-                    <ul onClick={() => onChangeMode()} className="note-input clean-list flex align-center justify-center" >
+                    <ul onClick={() => onChangeMode()} className="new-note-placeholder clean-list" >
                         <div className="add-note-bar">
                             <li>
-                                <input ref={inputRef} type="text" name="" id="" placeholder="Take a note..." />
+                                <input className="input-placeholder" ref={inputRef} type="text" name="" id="" placeholder="Take a note..." />
                             </li>
                         </div>
                     </ul>
@@ -66,3 +67,6 @@ export function NoteIndex() {
         </section>
     )
 }
+
+
+// https://www.gstatic.com/images/branding/product/2x/keep_2020q4_48dp.png

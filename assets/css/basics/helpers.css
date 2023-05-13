@@ -30,10 +30,6 @@
   'opsz' 48
 }
 
-.magnifier::before {
-    content: '\e8b6';
-}
-
 .icon-bg {
     height: 2rem;
     width: 2rem;
