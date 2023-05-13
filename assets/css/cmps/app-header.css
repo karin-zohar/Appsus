@@ -16,13 +16,17 @@ header {
     padding: 20px 0;
 }
 
+nav {
+    padding-inline-end: 1em;
+}
+
 nav a {
     font-family: Roboto-serif;
     margin: .5em;
 }
 
-nav a:active {
-    color: purple;
+nav a:hover {
+    color: darkblue;
 }
 
 nav a.active {
