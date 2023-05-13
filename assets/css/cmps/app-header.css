@@ -1,6 +1,13 @@
 header {
-    background: lightcyan;
-    border-bottom: 2px solid white;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-family: Yeseva-one;
+    font-size: 1.5rem;
+    padding-inline-start: 1em;
 }
 
 .app-header {
@@ -10,6 +17,7 @@ header {
 }
 
 nav a {
+    font-family: Roboto-serif;
     margin: .5em;
 }
 
@@ -18,7 +26,8 @@ nav a:active {
 }
 
 nav a.active {
+    font-family: Roboto-serif-italic;
     color: darkblue;
     font-weight: bold;
-    text-decoration: overline;
+    
 }

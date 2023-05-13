@@ -1,1 +1,39 @@
  /* home */
+ .home {
+    position: relative;
+    margin-top: 10%;
+    margin-left: 10%;
+ }
+ .home h1 {
+    font-family: Yeseva-one;
+    /* position: absolute; */
+    margin: auto;
+    padding-inline-start: 2rem;
+    font-size: 2.5rem;
+ }
+
+ .home h3 {
+    padding-inline-start: 2.3rem;
+    padding-block: 1em;
+    letter-spacing: 0.1em;
+ }
+
+ .home-btns {
+    margin: auto;
+    padding-block: 1em;
+    position: absolute;
+    transform: translate(30%,-50%);
+ }
+
+ .home-btns button {
+    background: none;
+    border: none;
+    font-family: Yeseva-one;
+    font-size: 1em;
+    margin: 1em;
+    transition: 0.3s;
+ }
+
+ .home-btns button:hover {
+    color: darkblue;
+ }

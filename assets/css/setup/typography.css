@@ -8,3 +8,17 @@
     src: url(/assets/fonts/Roboto/Roboto-Bold.ttf)
 }
 
+@font-face {
+    font-family: Roboto-serif;
+    src: url(/assets/fonts/RobotoSerif/RobotoSerif-VariableFont_GRAD\,opsz\,wdth\,wght.ttf)
+}
+
+@font-face {
+    font-family: Roboto-serif-italic;
+    src: url(/assets/fonts/RobotoSerif/RobotoSerif-Italic-VariableFont_GRAD\,opsz\,wdth\,wght.ttf)
+}
+
+@font-face {
+    font-family: Yeseva-one;
+    src: url(/assets/fonts/YesevaOne/YesevaOne-Regular.ttf)
+}
